@@ -7,21 +7,16 @@ interface ClaudeLogoIconProps {
   size?: number;
 }
 
-/** Claude sparkle-style icon for UI branding */
+/** Official Claude AI symbol. Used across the site for branding. */
 export function ClaudeSparkle({ className, size = 20 }: ClaudeLogoIconProps) {
   return (
-    <svg
+    <img
+      src="/claude-ai-symbol.svg"
+      alt=""
       width={size}
       height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      className={cn("text-claude-coral", className)}
+      className={cn("shrink-0", className)}
       aria-hidden
-    >
-      <path
-        d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z"
-        fill="currentColor"
-      />
-    </svg>
+    />
   );
 }
